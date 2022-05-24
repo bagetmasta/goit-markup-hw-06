@@ -65,8 +65,13 @@ ul {
   fill: #2196f3;
 }
 
-.svg-envelope {
+.svg-envelope,
+.svg-smartphone {
   margin-right: 10px;
+
+  transition-property: fill;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--timing-function);
 }
 
 .contact-nav .contact-link {
@@ -82,10 +87,6 @@ ul {
 
 .icon-smartphone:hover {
   fill: #2196f3;
-}
-
-.svg-smartphone {
-  margin-right: 10px;
 }
 
 /* Добавляем иконки в feature-list и стилизируем их */
@@ -147,6 +148,8 @@ ul {
 .svg-facebook,
 .svg-linkedin {
   fill: #afb1b8;
+
+  transition: fill var(--transition-duration) var(--timing-function);
 }
 
 .link-instagram:hover .svg-instagram,
@@ -484,13 +487,12 @@ address {
 .nav-link.current::after {
   position: absolute;
   content: '';
-  width: 48px;
+  width: 100%;
   height: 4px;
-  bottom: 0px;
+  bottom: -1px;
   right: 0px;
   background-color: #2196F3;
   border-radius: 2px;
-  /* display: none; */
 }
 
 /* .nav-link.current:hover::after,
@@ -503,9 +505,9 @@ address {
 .site-nav .current-portfolio::after {
   position: absolute;
   content: '';
-  width: 78px;
+  width: 100%;
   height: 4px;
-  bottom: 0px;
+  bottom: -1px;
   right: 0px;
   background-color: #2196F3;
   border-radius: 2px;
@@ -563,7 +565,7 @@ address {
   cursor: pointer;
   border: none;
 
-  transition-property: background-color, box-shadow;
+  transition-property: background-color, box-shadow, color;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--timing-function);
 }
@@ -638,7 +640,7 @@ address {
 
 /* Делаем overlay для наших проектов */
 
-.wrap-element {
+.hidden-box {
   position: relative;
   overflow: hidden;
 }
@@ -813,7 +815,7 @@ h1 {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-
+  z-index: 1;
 
   opacity: 1;
   transition: opacity var(--timing-function) var(--transition-duration), visibility var(--timing-function) var(--transition-duration);
