@@ -199,8 +199,8 @@ ul {
   fill: #afb1b8;
 
   transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--timing-function);
 }
 
 .link-clients:hover .svg-client1,
@@ -833,6 +833,7 @@ h1 {
   height: 581px;
   top: 50%;
   left: 50%;
+  padding: 40px;
 
   background-color: #FFFFFF;
 
@@ -840,10 +841,11 @@ h1 {
   transition: transform var(--timing-function) var(--transition-duration);
 }
 
-.form-modal {
+/* .form-modal {
   width: 528px;
   height: 581px;
-}
+  padding: 40px;
+} */
 
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.5);
@@ -853,8 +855,8 @@ h1 {
   position: absolute;
   width: 30px;
   height: 30px;
-  top: 0;
-  right: 0;
+  top: 8px;
+  right: 8px;
 
   background-color: #FFFFFF;
   border-color: rgba(0, 0, 0, 0.1);
@@ -862,10 +864,11 @@ h1 {
   fill: #000000;
 
   cursor: pointer;
-  transition: fill 250ms var(--timing-function);
+  transition: fill var(--transition-duration) var(--timing-function);
 }
 
-.backdrop-button-close:focus {
+.backdrop-button-close:focus,
+.backdrop-button-close:hover {
   fill: #2196f3;
 }
 
@@ -873,7 +876,9 @@ h1 {
 
 .form-footer {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+
+  width: 570px;
   margin-left: 93px;
   font-weight: 700;
 }
@@ -917,7 +922,7 @@ h1 {
 
   cursor: pointer;
 
-  transition: background-color 250ms var(--timing-function);
+  transition: background-color var(--transition-duration) var(--timing-function);
 }
 
 /* Ниже не подключает иконку к фотке */
@@ -931,10 +936,6 @@ h1 {
   background-image: url(../images/airplane.svg);
   background-repeat: no-repeat;
 
-}
-
-.form-modal {
-  padding: 40px;
 }
 
 .form-modal-tittle {
@@ -963,23 +964,20 @@ textarea {
   padding-bottom: 12px;
   margin-bottom: 28px;
   padding-left: 42px;
+  outline: none;
 
-  transition: border-color 250ms var(--timing-function);
+  transition: border-color var(--transition-duration) var(--timing-function);
   cursor: pointer;
 }
 
 .form-field input:focus,
 .comment:focus {
     border-color: #2196f3;
-    border-width: 3px;
+    border-width: 1px;
 }
 
 .form-field:focus-within .svg-modal-icon {
   fill: #2196f3;
-}
-
-.form-field:focus-within input {
-  border-color: 1px solid #2196f3;
 }
 
 .comment {
@@ -992,17 +990,23 @@ textarea {
   height: 120px;
   margin-bottom: 20px;
   cursor: pointer;
+  outline: none;
 
-  transition: border-color 250ms var(--timing-function);
+  transition: border-color var(--transition-duration) var(--timing-function);
 }
 
 .checkbox {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   margin-bottom: 30px;
 
   line-height: 1.71;
+}
+
+.conditions {
+  color: #2196F3;
 }
 
 .checkbox-input {
@@ -1025,8 +1029,8 @@ textarea {
   border-width: 2px;
   border-radius: 2px;
 
-  transition: background-color 250ms var(--timing-function), border-color 250ms var(--timing-function),
-  background-image 250ms var(--timing-function);
+  transition: background-color var(--transition-duration) var(--timing-function), border-color var(--transition-duration) var(--timing-function),
+  background-image var(--transition-duration) var(--timing-function);
 }
 
 .checkbox-input:checked + .icon {
@@ -1037,9 +1041,9 @@ textarea {
   background-size: contain;
 
   background-origin: border-box;
-  transition: background-color 250ms var(--timing-function),
-  border-color 250ms var(--timing-function),
-  background-image 250ms var(--timing-function) ;
+  transition: background-color var(--transition-duration) var(--timing-function),
+  border-color var(--transition-duration) var(--timing-function),
+  background-image var(--transition-duration) var(--timing-function) ;
 }
 
 .policy {
@@ -1068,7 +1072,7 @@ textarea {
   color: #ffffff;
 
   cursor: pointer;
-  transition: background-color 250ms var(--timing-function);
+  transition: background-color var(--transition-duration) var(--timing-function);
 }
 
 .form-label {
@@ -1088,5 +1092,5 @@ textarea {
   left: 15px;
 
   margin-right: 12px;
-  transition: fill 250ms var(--timing-function);
+  transition: fill var(--transition-duration) var(--timing-function);
 }
