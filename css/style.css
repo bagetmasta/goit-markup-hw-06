@@ -28,7 +28,7 @@ ul {
   padding: 0;
 }
 
-.hero-tittle {
+.hero-title {
   margin: 0 auto 30px;
 
   letter-spacing: var(--hero-letter-spacing);
@@ -252,7 +252,7 @@ h2 {
   border-left: 1px solid #eeeeee;
 }
 
-.project-tittle {
+.project-title {
   margin-bottom: 4px;
   font-size: 18px;
   line-height: 2;
@@ -267,7 +267,7 @@ h2 {
   line-height: 1.88;
 }
 
-.feature-tittle {
+.feature-title {
   margin-top: 0px;
   margin-bottom: 20px;
 
@@ -355,7 +355,7 @@ address {
   font-style: normal;
 }
 
-.section-tittle {
+.section-title {
   margin-bottom: 50px;
 
   font-size: 36px;
@@ -594,7 +594,7 @@ address {
 }
 
 .footer-nav-address,
-.hero-tittle {
+.hero-title {
   color: #ffffff;
 }
 
@@ -772,8 +772,8 @@ h1 {
   margin-left: 70px;
 }
 
-.second-footer-flex-container .feature-tittle,
-.form-footer .feature-tittle {
+.second-footer-flex-container .feature-title,
+.form-footer .feature-title {
   color: #ffffff;
   cursor: pointer;
 }
@@ -940,7 +940,7 @@ h1 {
 
 }
 
-.form-modal-tittle {
+.form-modal-title {
   display: block;
   margin-bottom: 30px;
 
