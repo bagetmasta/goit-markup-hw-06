@@ -775,6 +775,7 @@ h1 {
 .second-footer-flex-container .feature-tittle,
 .form-footer .feature-tittle {
   color: #ffffff;
+  cursor: pointer;
 }
 
 .second-footer-flex-container ul {
@@ -893,6 +894,7 @@ h1 {
 
   background-color: #2F303A;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .form-button-footer {
