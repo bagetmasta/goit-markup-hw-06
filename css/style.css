@@ -186,7 +186,8 @@ ul {
   transition-timing-function: var(--timing-function);
 }
 
-.feature-list-clients:hover .link-clients {
+.feature-list-clients:hover .link-clients,
+.feature-list-clients:focus .link-clients {
   border: 1px solid #2196f3;
 }
 
